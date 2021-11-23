@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import 의료진목록 from "../data/의료진목록";
-import '../style/Medi.scss'
+import "../style/Medi.scss";
 import defaultImg from "../srcImage/defaultProfile.png";
 function Medical_staff(props) {
   let url = useParams().name;
@@ -44,26 +44,52 @@ function Medical_staff(props) {
             })}
         </ul>
       </div>
-      <div className="수상경력">
-      <div>수상경력: </div>
-        <ul>
-          {대상.수상경력
-            .sort((a, b) => {
-              return a.id - b.id;
-            })
-            .map((a, i) => {
-              return (
-                <li>
-                  {a.날짜} {a.내용}
-                </li>
-              );
-            })}
-        </ul>
-      </div>
+      {대상.수상경력 === undefined ? (
+        ""
+      ) : (
+        <div className="수상경력">
+          <div>수상경력: </div>
+          <ul>
+            {대상.수상경력
+              .sort((a, b) => {
+                return a.id - b.id;
+              })
+              .map((a, i) => {
+                return (
+                  <li>
+                    {a.날짜} {a.내용}
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
+      )}
+      {대상.학회활동 === undefined ? (
+        ""
+      ) : (
+        <div className="학회활동">
+          <div>학회활동: </div>
+          <ul>
+            {대상.학회활동
+              .sort((a, b) => {
+                return a.id - b.id;
+              })
+              .map((a, i) => {
+                return (
+                  <li>
+                    {a.시작} {a.끝 !== undefined ? `~ ${a.끝}` : ""} {a.내용}
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
+      )}
+
       <div className="논문">
+        <div>논문: </div>
         <ul>
           {대상.논문.map((a, i) => {
-            return <li>{a.제목}</li>;
+            return <li><span style={{fontWeight:'600'}}>&#91;{a.분류}&#93;</span> {a.제목}</li>;
           })}
         </ul>
       </div>
