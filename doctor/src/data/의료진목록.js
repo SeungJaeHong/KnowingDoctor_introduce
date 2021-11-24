@@ -2,7 +2,7 @@ const 의료진목록 = [
     {
         id: 0,
         프로필: 'http://anam.kumc.or.kr/upload/deptdoctors/1495177597995_AE40C740C120.png',
-        name: ['김은선','Kim_Eun_Seon'],
+        name: ['김은선','Kim_Eun_Sun'],
         진료과: '소화기내과',
         전문진료분야: ['위장관 질환','위암','대장암','염증성 장질환'],
         소속병원: '고려대학교 안암병원',
