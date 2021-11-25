@@ -3,7 +3,16 @@
 body{
     font-family: 'Noto Sans KR', sans-serif;
 }
-
+.btn-의료진소개{
+    display: inline-block;
+    margin-left: auto;
+    font-weight: 700;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: $skyBlue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
 .professor-card{
     &#wrapper{
         padding: 0.75rem;

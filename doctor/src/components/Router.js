@@ -15,6 +15,7 @@ function AppRouter(props) {
 
         <Routes>
           <Route path="" element={<Home />}></Route>
+          <Route path="professor" element={<Medical_search />}></Route>
           <Route path="professor">
             <Route path=":name" element={<Medical_staff />}></Route>
           </Route>
