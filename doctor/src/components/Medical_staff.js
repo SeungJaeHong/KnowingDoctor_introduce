@@ -5,6 +5,12 @@ import 의료진목록 from "../data/의료진목록";
 import "../style/Medi.scss";
 import defaultImg from "../srcImage/defaultProfile.png";
 function Medical_staff(props) {
+  //학력, 경력, 수상경력, 학회활동, 논문
+  let 탭목룍 = ['학력','경력','수상경력','학회활동','논문']
+  let 보유목룍 = [];
+  for(let i =0;i<5;i++){
+    
+  }
   let url = useParams().name;
   console.log(url);
   console.log(의료진목록);
@@ -13,6 +19,8 @@ function Medical_staff(props) {
   });
   console.log(대상);
   const [info,setInfo] = useState(0);
+
+  
   return (
     <div className="container mt-5">
       <div className="d-flex">
@@ -29,10 +37,10 @@ function Medical_staff(props) {
         </div>
       </div>
       <div className="professor-profile-tab">
-        <div className="tab-list active">학력</div>
-        <div className="tab-list">경력</div>
-        <div className="tab-list">수상경력</div>
-        <div className="tab-list">논문</div>
+        <div onClick={()=>setInfo(0)} className={`tab-list ${info === 0 ? 'active' : ''}`}>학력</div>
+        <div onClick={()=>setInfo(1)} className={`tab-list ${info === 1 ? 'active' : ''}`}>경력</div>
+        <div onClick={()=>setInfo(2)} className={`tab-list ${info === 2 ? 'active' : ''}`}>수상경력</div>
+        <div onClick={()=>setInfo(3)} className={`tab-list ${info === 3 ? 'active' : ''}`}>논문</div>
       </div>
       <div className="전문진료분야">
         전문 진료 분야:{" "}
