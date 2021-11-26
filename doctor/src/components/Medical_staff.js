@@ -6,18 +6,21 @@ import "../style/Medi.scss";
 import defaultImg from "../srcImage/defaultProfile.png";
 function Medical_staff(props) {
   //학력, 경력, 수상경력, 학회활동, 논문
-  let 탭목룍 = ['학력','경력','수상경력','학회활동','논문']
-  let 보유목룍 = [];
-  for(let i =0;i<5;i++){
-    
-  }
   let url = useParams().name;
   console.log(url);
   console.log(의료진목록);
   const 대상 = 의료진목록.find((e) => {
     return e.name[1] === url || e.name[0] === url;
   });
-  console.log(대상);
+  const 탭목록= ['학력','경력','수상경력','학회활동','논문'];
+  let 보유목록 = [];
+  console.log(탭목록);
+  for(let i =0;i<5;i++){
+    if(대상.hasOwnProperty(탭목록[i]) === true){
+      보유목록.push(탭목록[i]);
+    }
+  }
+  console.log(보유목록);
   const [info,setInfo] = useState(0);
 
   
@@ -37,10 +40,14 @@ function Medical_staff(props) {
         </div>
       </div>
       <div className="professor-profile-tab">
-        <div onClick={()=>setInfo(0)} className={`tab-list ${info === 0 ? 'active' : ''}`}>학력</div>
-        <div onClick={()=>setInfo(1)} className={`tab-list ${info === 1 ? 'active' : ''}`}>경력</div>
-        <div onClick={()=>setInfo(2)} className={`tab-list ${info === 2 ? 'active' : ''}`}>수상경력</div>
-        <div onClick={()=>setInfo(3)} className={`tab-list ${info === 3 ? 'active' : ''}`}>논문</div>
+        {보유목록.map((a,i)=>{
+          return (
+            <div onClick={()=>setInfo(i)} className={`tab-list ${info === i ? 'active' : ''}`}>
+              {보유목록[i]}
+            </div>
+          )
+        })}
+      
       </div>
       <div className="전문진료분야">
         전문 진료 분야:{" "}
