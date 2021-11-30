@@ -4,6 +4,7 @@ const 이영선 =[
         프로필: 'http://guro.kumc.or.kr/upload/deptdoctors/1506666431143_AC04C13CD130_C774C601C120_C0C1C138.png',
         name: ['이영선','Lee_Yeong_Seon'],
         진료과: '소화기내과',
+        URL: 'http://guro.kumc.or.kr/popup/popDoctorInfo.do?DR_NO=6882',
         전문진료분야: ['간질환'],
         소속병원: '고려대학교 구로병원',
         경력: [

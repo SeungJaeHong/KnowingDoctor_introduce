@@ -22,7 +22,7 @@ function Medical_staff(props) {
   }
   console.log(보유목록);
   const [info,setInfo] = useState(0);
-
+  document.title = `의료진 소개 | ${대상.name[0]}교수`
   
   return (
     <div className="container mt-5">
@@ -119,7 +119,8 @@ function Medical_staff(props) {
             return (
               <li>
                 <span style={{ fontWeight: "600" }}>&#91;{a.분류}&#93;</span>{" "}
-                {a.제목}
+                <a target="/blank" href={`https://pubmed.ncbi.nlm.nih.gov/?term=${a.제목.replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ).replace(/\(|\)/g,'').replace(/\ /g,'+')}`}>{a.제목}</a>
+                
               </li>
             );
           })}
