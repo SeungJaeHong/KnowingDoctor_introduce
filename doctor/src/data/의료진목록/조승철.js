@@ -73,11 +73,7 @@ const 조승철 = [
                 날짜: '',
                 내용: '2006년 대한수면연구회 우수포스터 수상',
             },
-            {
-                id: 1,
-                날짜: '',
-                내용: '2006년 대한수면연구회 우수포스터 수상',
-            },
+            
         ],
         학회활동: [
             {
@@ -125,8 +121,20 @@ const 조승철 = [
         ],
         논문: [
             {
+                분류: '2009',
+                제목: 'Thromboembolism of innominate artery stenosis causing subclavian steal phenomenon ipsilateral middle cerebral artery infarction. The Korean Stroke Society',
+            },
+            {
                 분류: '',
-                제목: '',
+                제목: 'reatment with Repeated Lumbar Epidural Blood Patches for a Patient with Orthostatic Headache after Suboccpital Craniectomy. J of Clinical Neurol Assoc / Vol 23 / October, 2005'
+            },
+            {
+                분류: '',
+                제목: 'Analysis of Dynamics of Gait in Parkinson\'s Disease with 3-Demensional Gait Analysis System. J of Clinical Neurol Assoc / Vol 23 / October, 2005'
+            },
+            {
+                분류: '',
+                제목: 'A case of Isolated Recurrent Hypersomnia With Excessive of Long Duration Sleepiness. J of Korean Sleep Soc / Vol 1/ December, 2004'
             }
         ]
     }

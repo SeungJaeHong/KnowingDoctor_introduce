@@ -20,7 +20,7 @@ function Medical_search(props) {
               <div className="professor-card-sizing">
                 <div className="content d-flex">
                   <div className="profile">
-                    <img src={a.프로필} alt="" />
+                    <img src={a.프로필} style={{width: '100%'}} alt="" />
                   </div>
                   <div className="texts">
                     <div className="title">
