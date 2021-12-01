@@ -3,7 +3,7 @@ import {useParams, Outlet} from 'react-router-dom';
 import 의료진목록 from "../data/의료진목록";
 import {Link} from 'react-router-dom'
 function Medical_search(props) {
-
+    document.title = '아는의사-의료진 소개'
     return (
         <div className="container" style={{marginTop:'64px'}}>
             <div className="의료진소개-title">
