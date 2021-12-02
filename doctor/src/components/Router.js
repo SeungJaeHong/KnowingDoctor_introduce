@@ -6,7 +6,7 @@ import {
   Link,
   useParams,
 } from "react-router-dom";
-import Medical_staff from "./Medical_staff";
+import Medical_staff from "./doctorPage/Medical_staff";
 import Home from "./Home";
 import Medical_search from "./Medical_search";
 function AppRouter(props) {
