@@ -27,7 +27,7 @@ function Medical_search(props) {
                       <div>{a.name[0]}</div>
                       <div>{a.진료과}</div>
                     </div>
-                    <div>{a.경력[0].내용}</div>
+                    <div>{a.학력[0].내용}</div>
                     <div></div>
                   </div>
                 </div>

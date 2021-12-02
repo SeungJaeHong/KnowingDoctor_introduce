@@ -1,6 +1,6 @@
 const 조승철 = [
     {
-        id: 0,
+        id: 5,
         프로필: 'https://himchanhospital.com/filedata/md_medical_team/20170914233618_vZYf5Lug_17.jpg',
         name: ['조승철','Jo_Seung_cheol'],
         진료과: '신경과',
