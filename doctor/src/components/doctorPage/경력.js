@@ -11,7 +11,7 @@ function 경력({대상}) {
           .map((a, i) => {
             return (
               <li>
-                {a.시작 !== undefined ? a.시작 : ''} {a.끝 !== ''|| a.끝 !== undefined !== "" ? `~ ${a.끝}` : ""} {a.내용}
+                {a.시작 !== undefined ? a.시작 : ''} {(a.끝 === ''|| a.끝 === undefined) ? '' : `~ ${a.끝}`} {a.내용}
               </li>
             );
           })}

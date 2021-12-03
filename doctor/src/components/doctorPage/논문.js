@@ -7,7 +7,11 @@ function 논문({대상}) {
           {대상.map((a, i) => {
             return (
               <li>
-                <span style={{ fontWeight: "600" }}>&#91;{a.분류}&#93;</span>{" "}
+                {
+                  a.분류 === undefined || a.분류 === ''
+                  ?''
+                  : <span style={{ fontWeight: "600" }}>&#91;{a.분류}&#93;</span>
+                }
                 <a
                   target="/blank"
                   href={`https://pubmed.ncbi.nlm.nih.gov/?term=${a.제목

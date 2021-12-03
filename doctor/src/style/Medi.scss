@@ -14,10 +14,18 @@
 .professor-card {
   position: relative;
   animation: fromBottom-30 1s linear;
-  animation-delay: 0.5s;
+  // animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
+.closeAnimation{
+  animation-delay: 0s!important;
+}
 .professor-profile-tab {
+  &.animation {
+    animation: fromBottom-30 1s linear;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
   margin: 64px 0px;
   display: flex;
   gap: 20px;
@@ -34,7 +42,7 @@
       height: 3px;
       opacity: 0;
       background: $skyBlue;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     &.active::after {
       opacity: 1;
@@ -49,7 +57,7 @@
     }
   }
 }
-.profile-wrapper{
+.profile-wrapper {
   background-color: #f2f2f2;
   padding: clamp(5px, 5vw, 44px);
   .profile {
@@ -60,24 +68,27 @@
     border-radius: 50%;
     overflow: hidden;
     background-color: white;
-    
+
     img {
       width: 100%;
       object-fit: cover;
     }
   }
-  .profile-text{
+  .profile-text {
     padding-left: clamp(10px, 5vw, 30px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding-top: clamp(10px, 3vw, 30px);
     padding-bottom: clamp(10px, 3vw, 30px);
-    .name{
+    .name {
       font-weight: 700;
       font-size: clamp(16px, 2vw, 22px);
     }
-    .진료과, .소속병원, .경력, .전문진료분야{
+    .진료과,
+    .소속병원,
+    .경력,
+    .전문진료분야 {
       font-weight: 700;
       font-size: clamp(8.743px, 1.09vw, 12px);
       line-height: 1.5em;
