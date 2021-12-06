@@ -32,7 +32,7 @@ function Medical_search(props) {
           <div className="의료진소개-title">
                 10년차 이상, 믿음직한 전문의들이<br/> 기다리고 있습니다.
             </div>
-          <div className="professor-profile-tab animation">
+          <div className="professor-profile-tab animation flex-wrap">
             {진료과.map((a,i)=>{
               return(
                 <div onClick={()=>{setTab(i)}} className={tab === i ? 'tab-list active': 'tab-list'}>{a}</div>
