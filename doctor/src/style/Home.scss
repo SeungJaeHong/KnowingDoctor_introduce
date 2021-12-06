@@ -42,6 +42,7 @@ body{
                     overflow: hidden;
                     img{
                         object-fit: cover;
+                        min-height: 96px;
                     }
                 }
                 .texts{

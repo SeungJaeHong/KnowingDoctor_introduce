@@ -2,7 +2,7 @@ const 이승현 =
 [
     {
         id: 0,
-        프로필: 'http://www.eulji.or.kr/upload/doctor/20210161_20210304164328.jpg',
+        프로필: 'https://www.eulji.or.kr/upload/doctor/20210161_20210303163510.jpg',
         name: ['이승현','Lee_Seung_Hyeon'],
         진료과: '안과',
         URL: 'http://www.eulji.or.kr/clinic/clinic_doc_view01_02.jsp?dept=ABJAAA&doct=20210161',
