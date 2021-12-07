@@ -5,6 +5,7 @@ function 프로필({ 대상 }) {
   const [show, setShow] = useState(false);
   const target = useRef(null);
   const  설명 = 진료과소개.find(e=>e.이름 === 대상.진료과).설명;
+  console.log(설명);
   return (
     <div className="d-flex profile-wrapper">
       <div className="profile">
