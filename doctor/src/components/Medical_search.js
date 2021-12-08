@@ -2,21 +2,30 @@ import React, {useState, useEffect} from 'react';
 import {useParams, Outlet} from 'react-router-dom';
 import 의료진목록 from "../data/의료진목록";
 import {Link} from 'react-router-dom';
+import 정렬순서 from '../data/정렬순서'
 
 function Medical_search(props) {
     document.title = '아는의사-의료진 소개'
+    
+    const [tab,setTab] = useState(0);
+    let 정렬결과 = [];
+    정렬순서.map((a,i)=>{
+      let tmp = [];
+      tmp = 의료진목록.filter((e)=>e.진료과===a);
+      console.log(tmp);
+      정렬결과.push(...tmp);
+    })
+    console.log(정렬결과);
+    let [맞는의사,set맞는의사]=useState([...정렬결과]);  //[...의료진목록]
     let 진료과 = ['전체'];
-    의료진목록.map((a,i)=>{
+    정렬결과.map((a,i)=>{
       if(진료과.find(e=>e === a.진료과) === undefined){
         진료과.push(a.진료과);
       }
     })
-    const [tab,setTab] = useState(0);
-    let [맞는의사,set맞는의사]=useState([...의료진목록]);
-    console.log(의료진목록);
     useEffect(()=>{
       if(tab === 0){
-        set맞는의사([...의료진목록])
+        set맞는의사([...정렬결과])
       }
       else{
         set맞는의사(의료진목록.filter(target=>target.진료과 === 진료과[tab]));
